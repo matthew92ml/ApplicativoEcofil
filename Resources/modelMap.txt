@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="../utility/manutenzione/assets/favicon.ico"/>
+    <title>Mappa di $1</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .labels {
+            color: #000;
+            background-color: white;
+            border: 1px solid #000;
+            font-family: "Lucida Grande", "Arial", sans-serif;
+            font-size: 12px;
+            text-align: center;
+            white-space: nowrap;
+            padding: 2px;
+        }
+
+            .labels.green {
+                background-color: #58D400;
+            }
+
+            .labels.red {
+                background-color: #D80027;
+                color: #fff;
+            }
+
+            .labels.yellow {
+                background-color: #FCCA00;
+            }
+
+            .labels.turquoise {
+                background-color: #00D9D2;
+            }
+
+            .labels.brown {
+                background-color: #BF5300;
+                color: #fff;
+            }
+    </style>
+</head>
+<body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxu581tgc59858UvW7VMSV3OiiZ-EEz3U&v=3&amp"></script>
+	<nav class="main-header navbar navbar-expand-lg bg-success sidebar-collapse" id="mainNavbar"  style="padding:0px;">
+	  <form class="form-inline col-md-12" style="padding:0px">
+	  <label id="text"></label>
+		</form>
+    </nav>
+    <div id="map"></div>
+    <script>
+		initMap();
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                mapTypeId: 'hybrid',
+				center: {lat: $2, lng: $3}});
+				var KML={ url: 'http://'+window.location.hostname+'/maps/$4.kml' };
+                var kmlLayer = new google.maps.KmlLayer( KML);
+                kmlLayer.setMap(map);
+				var last= new Date(document.lastModified);
+				document.getElementById('text').innerHTML ="<strong>Elaborato il "+ last.getFullYear()+"-"+ (last.getMonth()+1)+"-" +last.getDate()+" "+last.getHours()+":"+last.getMinutes()+":"+last.getSeconds()+"</strong>";
+				}</script>
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
